@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-val imageUrls = listOf(
+val listilladeimagenes = listOf(
     "https://s.france24.com/media/display/451ed2b8-eed6-11ea-afdd-005056bf87d6/w:980/p:16x9/messi-1805.jpg",
     "https://www.fcbarcelona.com/fcbarcelona/photo/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg",
     "https://media.newyorker.com/photos/64bc4330ef09d4a0e04cb249/master/pass/Rosen-Messi-Miami.jpg",
@@ -51,7 +51,7 @@ fun ImageCards(modifier: Modifier = Modifier) {
         contentPadding = PaddingValues(20.dp),
         verticalArrangement = Arrangement.spacedBy(18.dp)
     ) {
-        items(imageUrls) { imageUrl ->
+        items(listilladeimagenes) { listilladeimagenes ->
             Card(
                 colors = CardDefaults.cardColors(
                     containerColor = Color.DarkGray,
@@ -62,11 +62,11 @@ fun ImageCards(modifier: Modifier = Modifier) {
                     modifier = Modifier.padding(10.dp)
                 ) {
                     AsyncImage(
-                        model = imageUrl,
+                        model = listilladeimagenes,
                         contentDescription = "Messi el mejor del World",
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(200.dp)
+                            .height(250.dp)
                     )
                     Text(
                         text = "Messi el mejor del World ${Random.nextInt(10)}",
